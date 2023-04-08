@@ -1,0 +1,29 @@
+#:kivy 1.0.6
+Root:
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            background_color: 1, 0, 0, 1
+            size_hint_y: 0.3
+
+            Image:
+                source: './images/logo.jpg'
+                size: 300, 250
+                allow_stretch: True
+                pos: self.parent.center_x - self.width / 2, self.parent.center_y - self.height
+
+        Label:
+            id: AppTitle
+            font_size: 30
+            text: 'Pequeño Soccer App'
+            halign: 'center'
+            text_size: self.size
+            height: self.texture_size[1]
+
+        Button:
+            text: 'Partidos de hoy'
+            on_press: app.root.ids.kivy.text = 'Hello Kivy'
+        Button:
+            text: 'Canales'
+            on_press: app.root.ids.kivy.text = 'Hello Kivy'
